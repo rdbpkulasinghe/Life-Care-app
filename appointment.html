@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Book Appointment - LifeCare Clinic</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .content {
+    flex: 1;
+  }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-sm">
+    <a class="navbar-brand" href="#">LifeCare</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="doctors.html">Doctors</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="appointment.html">Appointment</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container mt-5 content">
+  <h2 class="mb-4 text-center">Book an Appointment</h2>
+
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form>
+        <!-- Customer Name -->
+        <div class="mb-3">
+          <label for="customerName" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="customerName" placeholder="Enter your name" required>
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+          <label for="customerEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="customerEmail" placeholder="Enter your email" required>
+        </div>
+
+        <!-- Select Doctor -->
+        <div class="mb-3">
+          <label for="doctorSelect" class="form-label">Select Doctor</label>
+          <select class="form-select" id="doctorSelect" required>
+            <option value="">Choose a doctor</option>
+            <option value="dr_silva">Dr. Silva - Cardiologist</option>
+            <option value="dr_perera">Dr. Perera - General Physician</option>
+            <option value="dr_fernando">Dr. Fernando - Pediatrician</option>
+          </select>
+        </div>
+
+        <!-- Select Date -->
+        <div class="mb-3">
+          <label for="appointmentDate" class="form-label">Select Date</label>
+          <input type="date" class="form-control" id="appointmentDate" required>
+        </div>
+
+        <!-- Select Time (optional) -->
+        <div class="mb-3">
+          <label for="appointmentTime" class="form-label">Select Time</label>
+          <input type="time" class="form-control" id="appointmentTime" required>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary w-50">Book Appointment</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center p-3 mt-5">
+  © 2024 LifeCare Clinic
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
